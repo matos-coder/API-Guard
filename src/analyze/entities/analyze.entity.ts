@@ -4,6 +4,7 @@ export enum SignatureType {
   USER_AGENT = 'USER_AGENT',
   IP_RANGE = 'IP_RANGE',
   HEADER_PATTERN = 'HEADER_PATTERN',
+  PATH_PATTERN = 'PATH_PATTERN',
 }
 
 export class Analyze {
@@ -13,7 +14,7 @@ export class Analyze {
   @Column({ type: 'enum', enum: SignatureType })
   type: SignatureType;
 
-  @Index() // Crucial for performance
+  @Index()
   @Column()
   pattern: string;
 
