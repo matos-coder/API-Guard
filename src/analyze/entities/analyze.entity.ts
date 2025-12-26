@@ -1,4 +1,4 @@
-import { PrimaryGeneratedColumn, Column, Index } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, Index } from 'typeorm';
 
 export enum SignatureType {
   USER_AGENT = 'USER_AGENT',
@@ -7,6 +7,7 @@ export enum SignatureType {
   PATH_PATTERN = 'PATH_PATTERN',
 }
 
+@Entity()
 export class Analyze {
   @PrimaryGeneratedColumn()
   id: number;

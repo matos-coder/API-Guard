@@ -7,10 +7,10 @@ import { UpdateAnalyzeDto } from './dto/update-analyze.dto';
 export class AnalyzeController {
   constructor(private readonly analyzeService: AnalyzeService) {}
 
-  // @Post()
-  // @HttpCode(HttpStatus.OK) 
-  // async analyze(@Body() dto: CreateAnalyzeDto) {
-  //   const result = await this.analyzeService.analyzeTraffic(dto);
-  //   return result;
-  // }
+  @Post()
+  @HttpCode(HttpStatus.OK) 
+  async analyze(@Body() dto: CreateAnalyzeDto) {
+    const result = await this.analyzeService.analyzeTraffic(dto);
+    return result;
+  }
 }
