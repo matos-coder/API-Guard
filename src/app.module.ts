@@ -15,7 +15,7 @@ import { Analyze } from './analyze/entities/analyze.entity';
       password: '1',
       database: 'guard_db',
       entities: [Analyze],
-      synchronize: true, // Auto-create tables (Dev only)
+      synchronize: true,
     }),
   ],
   controllers: [AppController],

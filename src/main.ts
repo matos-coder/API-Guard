@@ -18,7 +18,6 @@ async function bootstrap() {
   // 2. Create the document
   const document = SwaggerModule.createDocument(app, config);
 
-  // 3. Setup the Swagger UI at a specific path (e.g., 'api')
   SwaggerModule.setup('api', app, document);
 
   await app.listen(3000);
